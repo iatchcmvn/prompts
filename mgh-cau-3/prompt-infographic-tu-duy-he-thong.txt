@@ -1,0 +1,13 @@
+Bạn là chuyên gia thiết kế infographic. Hãy vẽ 2 ảnh infographic từ bản tóm tắt bên dưới, LẦN LƯỢT từng ảnh: vẽ Ảnh 1 xong thì dừng, chờ tôi nhắn "Tiếp" mới vẽ Ảnh 2.
+
+Yêu cầu chung cho mỗi ảnh:
+- Khổ DỌC 9:16, mỗi ảnh chỉ 1 infographic (không ghép 2 ảnh vào 1).
+- Nền tối (xanh navy), chữ tiếng Việt có dấu, rõ ràng, đúng chính tả.
+- Tiêu đề: "TƯ DUY HỆ THỐNG CHO [TÊN TÔI]".
+- Chữ trên ảnh chỉ lấy từ bản tóm tắt; không tự thêm khẩu hiệu, không bịa số liệu.
+
+Ảnh 1: Sơ đồ công việc [tên công việc] của tôi tại NutriNest theo 4 khối Đầu vào → Xử lý → Đầu ra → Phản hồi; đánh dấu bước AI hỗ trợ.
+Ảnh 2: Bố cục khác Ảnh 1, nhấn mạnh phần "Hành động bắt đầu ngay tuần này".
+
+Bản tóm tắt của tôi:
+[dán bản tóm tắt Câu 2 vào đây]
