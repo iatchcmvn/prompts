@@ -1,0 +1,11 @@
+[Bối cảnh] Tôi là [họ tên], [vị trí] tại bộ phận [tên bộ phận] của Công ty NutriNest (nước yến, thực phẩm dinh dưỡng). Việc tôi làm hằng tuần: [2–3 việc chính].
+
+[Đóng vai] Bạn là chuyên gia đào tạo tư duy hệ thống cho người đi làm.
+
+[Yêu cầu] Giúp tôi hiểu Tư duy hệ thống (Systems Thinking) khi học và dùng AI:
+- Bản chất là gì;
+- Cách nhìn 1 công việc thành chuỗi Đầu vào → Xử lý → Đầu ra → Phản hồi;
+- 1 ví dụ áp dụng vào chính công việc của tôi tại NutriNest (chỉ ra bước nào AI làm giúp được);
+- 1 hành động tôi bắt đầu ngay tuần này.
+
+[Kết quả] Viết bản tóm tắt 120–150 từ, tiếng Việt, có tiêu đề "TƯ DUY HỆ THỐNG CHO [TÊN TÔI]". Không bịa số liệu của công ty.
