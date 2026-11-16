@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt App mẫu 2 · Câu 4 · Bài tập 2 · Buổi 3 · K3 NutriNest</title>
+<meta name="description" content="Prompt dựng App Tính đơn hàng đại lý bằng Claude Artifacts.">
+<meta property="og:title" content="Prompt App mẫu 2 · Câu 4 · Bài tập 2 · Buổi 3 · K3 NutriNest">
+<meta property="og:description" content="Prompt dựng App Tính đơn hàng đại lý bằng Claude Artifacts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2a5c;--blue:#2453e6;--blue-d:#1a3fb8;--ink:#1b2333;--muted:#5d6779;--line:#e3e8f1;--bg:#f5f7fb;--card:#fff;--ok:#12895a}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-text-size-adjust:100%}
+.bar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:760px;margin:0 auto;padding:10px 16px;display:flex;flex-direction:column;gap:8px}
+.btn-copy{width:100%;border:0;border-radius:12px;padding:14px 16px;background:var(--blue);color:#fff;font-weight:700;font-size:17px;font-family:inherit;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 14px rgba(36,83,230,.28)}
+.btn-copy:hover{background:var(--blue-d)}.btn-copy.done{background:var(--ok)}.btn-copy svg{width:20px;height:20px}
+.links{display:grid;grid-template-columns:1fr;gap:8px}
+.links a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:10px;padding:9px 10px;font-weight:600;font-size:14.5px}
+main{max-width:760px;margin:0 auto;padding:22px 16px 40px}
+.tag{display:inline-block;background:#e8eefc;color:var(--blue-d);font-weight:600;font-size:12.5px;padding:4px 10px;border-radius:999px}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.2;margin:10px 0 6px;color:var(--navy);font-weight:800}
+.meta{color:var(--muted);font-size:13.5px;margin:0 0 18px}
+.guide{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:18px}
+.guide h2{font-size:16px;margin:0 0 8px;color:var(--navy)}.guide ol{margin:0;padding-left:20px}.guide li{margin:3px 0;font-size:15px}
+.guide .tips{margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--line);font-size:14px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px}th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}th{color:var(--navy)}
+.prompt-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 12px;margin:0 0 8px}
+.prompt-head h2{font-size:16px;margin:0;color:var(--navy)}.prompt-head span{font-size:12.5px;color:var(--muted)}
+.prompt{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.65;user-select:text}
+footer{max-width:760px;margin:0 auto;padding:0 16px 36px;color:var(--muted);font-size:13.5px;text-align:center}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#111827;color:#fff;padding:11px 16px;border-radius:10px;font-size:14.5px;max-width:92vw;text-align:center;transition:opacity .2s,transform .2s;z-index:20}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div class="bar"><div class="bar-in">
+<button class="btn-copy" id="copyBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span id="copyLabel">Copy Prompt</span></button>
+<div class="links"><a href="https://claude.ai/new" target="_blank" rel="noopener">🟠 Mở Claude</a></div>
+</div></div>
+<main>
+<span class="tag">Lớp AI K3 NutriNest · Buổi 3 · Bài tập 2 · Câu 4</span>
+<h1>App mẫu 2: Tính đơn hàng đại lý</h1>
+<p class="meta">Dùng với Claude (Artifacts) · Cập nhật 16/11/2026</p>
+<section class="guide"><h2>📌 Cách dùng</h2><ol><li>Bấm <b>Copy Prompt</b> → bấm <b>Mở Claude</b> → mở <b>cuộc trò chuyện mới</b>, dán vào và gửi.</li><li>App hiện ở khung bên phải. Chưa thấy thì gõ thêm: "Hiển thị dạng artifact".</li><li>Chạy thử 3 bộ số trong bảng dưới, so kết quả.</li><li>Chụp ảnh <b>khổ ngang 4:3</b> với đơn <b>A15 + B10</b>: thấy tổng thanh toán 10.233.500 đ và dòng gợi ý mua thêm. Nộp vào Câu 4 trên Google Form.</li></ol>
+<table><tr><th>Bộ số</th><th>Kết quả đúng</th></tr><tr><td>A15 + B10</td><td>10.550.000 đ · CK 3% · thanh toán 10.233.500 đ · tặng 1 + 1 thùng · "Mua thêm 19.450.000 đ để được CK 5%"</td></tr><tr><td>C19</td><td>9.880.000 đ · CK 0% · "Mua thêm 120.000 đ để được CK 3%"</td></tr><tr><td>A100 + B20 + C30</td><td>68.200.000 đ · CK 7% · thanh toán 63.426.000 đ</td></tr></table>
+<p class="tips">💡 Giá trong app là giá minh họa, không phải bảng giá thật. App tính sai bộ số nào thì nhắn Claude sửa đúng quy tắc trong prompt, mỗi lần một ý.</p></section>
+<div class="prompt-head"><h2>Nội dung prompt mẫu</h2><span>Có thể nhấn giữ để chọn chữ</span></div>
+<div class="prompt" id="promptBox"></div>
+</main>
+<footer>Trung tâm IATC – Học viện AI Labs Mastery (ALM) · GV Nguyễn Thăng Long</footer>
+<div class="toast" id="toast" role="status"></div>
+<script type="text/plain" id="promptSrc">Tạo cho mình một app (artifact) bằng tiếng Việt theo mô tả "App 5 ô" sau:
+
+[1. Ai dùng] Nhân viên bán hàng kênh đại lý của NutriNest, dùng khi lên đơn cho đại lý.
+
+[2. Nhập gì] Tên đại lý, ngày đặt hàng. Danh sách 3 sản phẩm mẫu với giá minh họa (đã gồm VAT): Sản phẩm mẫu A 450.000 đ/thùng; Sản phẩm mẫu B 380.000 đ/thùng; Sản phẩm mẫu C 520.000 đ/thùng. Mỗi sản phẩm có ô nhập số thùng.
+
+[3. Quy tắc xử lý]
+- Thành tiền từng dòng = số thùng × đơn giá. Số thùng phải là số nguyên từ 0 trở lên, nhập sai thì báo lỗi.
+- Chiết khấu tính theo tổng tiền hàng: dưới 10 triệu 0%; từ 10 triệu đến dưới 30 triệu 3%; từ 30 triệu đến dưới 50 triệu 5%; từ 50 triệu trở lên 7%.
+- Khuyến mãi: mỗi sản phẩm cứ đủ 10 thùng được tặng 1 thùng cùng loại (tặng không tính tiền).
+- Nếu chưa ở bậc cao nhất, tính số tiền còn thiếu để lên bậc chiết khấu kế tiếp.
+
+[4. Ra kết quả gì] Bảng đơn hàng (sản phẩm, số thùng, thùng tặng, thành tiền), tổng tiền hàng, % chiết khấu, tiền chiết khấu, tổng thanh toán, và dòng gợi ý "Mua thêm … đ để được chiết khấu …%". Nút "Sao chép đơn" ra đoạn chữ gọn để dán vào Zalo/Telegram gửi đại lý. Nút "Xuất CSV".
+
+[5. Giao diện] Gọn, tiền hiển thị dạng 1.234.567 đ, tông xanh navy. Ghi chú nhỏ ở cuối: "Giá minh họa cho bài thực hành, không phải bảng giá thật". Không tự thêm sản phẩm, phí hay chương trình khác ngoài mô tả trên.</script>
+<script>
+(function(){
+var box=document.getElementById("promptBox");var promptText=document.getElementById("promptSrc").textContent.trim();box.textContent=promptText;
+var btn=document.getElementById("copyBtn"),label=document.getElementById("copyLabel"),toast=document.getElementById("toast"),timer;
+function showToast(m){toast.textContent=m;toast.classList.add("show");clearTimeout(timer);timer=setTimeout(function(){toast.classList.remove("show")},3200)}
+function success(){btn.classList.add("done");label.textContent="Đã copy! Dán vào Claude";showToast("✅ Đã copy prompt. Mở Claude, dán vào và gửi.");setTimeout(function(){btn.classList.remove("done");label.textContent="Copy Prompt"},3500)}
+function legacyCopy(){var ta=document.createElement("textarea");ta.value=promptText;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.top="0";ta.style.opacity="0";ta.style.fontSize="16px";document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,ta.value.length);var ok=false;try{ok=document.execCommand("copy")}catch(e){}document.body.removeChild(ta);return ok}
+function selectBox(){var r=document.createRange();r.selectNodeContents(box);var s=window.getSelection();s.removeAllRanges();s.addRange(r);box.scrollIntoView({behavior:"smooth",block:"start"})}
+function fail(){selectBox();showToast("Đã bôi đen nội dung. Nhấn giữ vào vùng chữ → Sao chép.")}
+btn.addEventListener("click",function(){if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(promptText).then(success,function(){legacyCopy()?success():fail()});return}legacyCopy()?success():fail()});
+})();
+</script>
+</body>
+</html>
