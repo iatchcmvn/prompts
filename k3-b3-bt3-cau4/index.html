@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt App mẫu 3 · Câu 4 · Bài tập 3 · Buổi 3 · K3 NutriNest</title>
+<meta name="description" content="Prompt dựng App mẫu 3: Kiểm tra hóa đơn đầu vào, kèm bộ số kiểm tra.">
+<meta property="og:title" content="Prompt App mẫu 3 · Câu 4 · Bài tập 3 · Buổi 3 · K3 NutriNest">
+<meta property="og:description" content="Prompt dựng App mẫu 3: Kiểm tra hóa đơn đầu vào, kèm bộ số kiểm tra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2a5c;--blue:#2453e6;--blue-d:#1a3fb8;--ink:#1b2333;--muted:#5d6779;--line:#e3e8f1;--bg:#f5f7fb;--card:#fff;--ok:#12895a}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-text-size-adjust:100%}
+.bar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:760px;margin:0 auto;padding:10px 16px;display:flex;flex-direction:column;gap:8px}
+.btn-copy{width:100%;border:0;border-radius:12px;padding:14px 16px;background:var(--blue);color:#fff;font-weight:700;font-size:17px;font-family:inherit;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 14px rgba(36,83,230,.28)}
+.btn-copy:hover{background:var(--blue-d)}.btn-copy.done{background:var(--ok)}.btn-copy svg{width:20px;height:20px}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.links a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:10px;padding:9px 10px;font-weight:600;font-size:14.5px}
+main{max-width:760px;margin:0 auto;padding:22px 16px 40px}
+.tag{display:inline-block;background:#e8eefc;color:var(--blue-d);font-weight:600;font-size:12.5px;padding:4px 10px;border-radius:999px}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.2;margin:10px 0 6px;color:var(--navy);font-weight:800}
+.meta{color:var(--muted);font-size:13.5px;margin:0 0 18px}
+.guide{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:18px}
+.guide h2{font-size:16px;margin:0 0 8px;color:var(--navy)}.guide ol{margin:0;padding-left:20px}.guide li{margin:3px 0;font-size:15px}
+.guide .tips{margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--line);font-size:14px;color:var(--muted)}
+.prompt-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 12px;margin:0 0 8px}
+.prompt-head h2{font-size:16px;margin:0;color:var(--navy)}.prompt-head span{font-size:12.5px;color:var(--muted)}
+.prompt{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.65;user-select:text}
+footer{max-width:760px;margin:0 auto;padding:0 16px 36px;color:var(--muted);font-size:13.5px;text-align:center}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#111827;color:#fff;padding:11px 16px;border-radius:10px;font-size:14.5px;max-width:92vw;text-align:center;transition:opacity .2s,transform .2s;z-index:20}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div class="bar"><div class="bar-in">
+<button class="btn-copy" id="copyBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span id="copyLabel">Copy Prompt</span></button>
+<div class="links" style="grid-template-columns:1fr"><a href="https://claude.ai/new" target="_blank" rel="noopener">🟠 Mở Claude</a></div>
+</div></div>
+<main>
+<span class="tag">Lớp AI K3 NutriNest · Buổi 3 · Bài tập 3 · Câu 4</span>
+<h1>App mẫu 3 · Kiểm tra hóa đơn đầu vào</h1>
+<p class="meta">Dùng với Claude · Cập nhật 17/11/2026</p>
+<section class="guide"><h2>📌 Cách dùng</h2><ol><li>Bấm <b>Copy Prompt</b> → bấm <b>Mở Claude</b> → mở cuộc trò chuyện mới, dán vào và gửi.</li><li>App hiện ở khung bên phải. Nhập 4 bộ số kiểm tra bên dưới (ngày hóa đơn chọn hôm nay).</li><li>Chụp ảnh khổ ngang 4:3 khi nhập bộ <b>6.000.000 · 10% · ghi 6.700.000 · tiền mặt</b>: thấy chênh lệch +100.000, trạng thái Lệch và cờ tiền mặt.</li><li>Nộp ảnh ở Câu 4 trên Google Form.</li></ol><p class="tips">💡 Nếu không thấy khung app, gõ thêm: "Hiển thị dạng artifact". Dùng số liệu minh họa, không nhập số liệu thật.</p><table style="width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px"><tr><th style="text-align:left;border:1px solid #e3e8f1;padding:6px;background:#f2f5fb">Bộ số kiểm tra</th><th style="text-align:left;border:1px solid #e3e8f1;padding:6px;background:#f2f5fb">Kết quả đúng</th></tr><tr><td style="border:1px solid #e3e8f1;padding:6px">10.000.000 · 10% · ghi 11.000.000 · chuyển khoản</td><td style="border:1px solid #e3e8f1;padding:6px">Thuế 1.000.000 · Khớp</td></tr><tr><td style="border:1px solid #e3e8f1;padding:6px">1.234.567 · 8% · ghi 1.333.333 · chuyển khoản</td><td style="border:1px solid #e3e8f1;padding:6px">Thuế 98.765 · đúng 1.333.332 · chênh +1 · Khớp</td></tr><tr><td style="border:1px solid #e3e8f1;padding:6px">2.000.000 · 8% · ghi 2.165.000 · chuyển khoản</td><td style="border:1px solid #e3e8f1;padding:6px">Thuế 160.000 · chênh +5.000 · Lệch nhẹ</td></tr><tr><td style="border:1px solid #e3e8f1;padding:6px">6.000.000 · 10% · ghi 6.700.000 · tiền mặt</td><td style="border:1px solid #e3e8f1;padding:6px">Thuế 600.000 · chênh +100.000 · Lệch + cờ tiền mặt</td></tr></table><p style="font-size:12.5px;color:#5d6779;margin:6px 0 0">Quy tắc minh họa cho bài thực hành, không phải quy định thuế.</p></section>
+<div class="prompt-head"><h2>Nội dung prompt mẫu</h2><span>Có thể nhấn giữ để chọn chữ</span></div>
+<div class="prompt" id="promptBox"></div>
+</main>
+<footer>Trung tâm IATC – Học viện AI Labs Mastery (ALM) · GV Phạm Hữu Phúc Ân</footer>
+<div class="toast" id="toast" role="status"></div>
+<script type="text/plain" id="promptSrc">Tạo cho mình một app (artifact) bằng tiếng Việt theo mô tả "App 5 ô" sau:
+
+[1. Ai dùng] Kế toán thanh toán của NutriNest, dùng khi nhận hóa đơn đầu vào của nhà cung cấp, trước khi làm đề nghị thanh toán.
+
+[2. Nhập gì] Tên nhà cung cấp, số hóa đơn, ngày hóa đơn. Tiền hàng trước thuế (đồng). Thuế suất GTGT (chọn 0%, 5%, 8% hoặc 10%). Tổng tiền ghi trên hóa đơn (đồng). Hình thức thanh toán (chuyển khoản hoặc tiền mặt). Các ô tiền chỉ nhận số nguyên không âm.
+
+[3. Quy tắc xử lý]
+- Tiền thuế = tiền hàng × thuế suất, làm tròn đến đồng (làm tròn thường).
+- Tổng đúng = tiền hàng + tiền thuế. Chênh lệch = tổng ghi trên hóa đơn − tổng đúng.
+- Chênh lệch tuyệt đối từ 0 đến 1.000 đ: "Khớp". Từ 1.001 đến 10.000 đ: "Lệch nhẹ – kế toán xem lại". Trên 10.000 đ: "Lệch – trả lại nhà cung cấp".
+- Nếu tổng ghi trên hóa đơn từ 5.000.000 đ trở lên mà chọn tiền mặt: hiện cờ đỏ "Cần chuyển khoản theo quy định mẫu của công ty", không phụ thuộc kết quả khớp hay lệch.
+- Báo lỗi bằng tiếng Việt nếu: thiếu ô, nhập số âm hoặc không phải số nguyên, ngày hóa đơn sau ngày hôm nay.
+
+[4. Ra kết quả gì] Hiển thị tiền thuế tính được, tổng đúng, chênh lệch (có dấu + hoặc −), trạng thái tô màu (Khớp xanh, Lệch nhẹ vàng, Lệch đỏ) và cờ thanh toán nếu có. Nút "Sao chép kết luận" tạo 2–3 dòng gửi trưởng phòng. Bảng các hóa đơn đã kiểm tra trong phiên này và nút "Xuất CSV".
+
+[5. Giao diện] Tiếng Việt, số tiền có dấu chấm ngăn nghìn (1.234.567), gọn, dùng tốt trên laptop. Chỉ dùng dữ liệu minh họa. Không tự thêm tính năng hay quy tắc ngoài mô tả. Cuối app ghi nhỏ: "Quy tắc minh họa cho bài thực hành, không phải quy định thuế."</script>
+<script>
+(function(){
+var box=document.getElementById("promptBox");var promptText=document.getElementById("promptSrc").textContent.trim();box.textContent=promptText;
+var btn=document.getElementById("copyBtn"),label=document.getElementById("copyLabel"),toast=document.getElementById("toast"),timer;
+function showToast(m){toast.textContent=m;toast.classList.add("show");clearTimeout(timer);timer=setTimeout(function(){toast.classList.remove("show")},3200)}
+function success(){btn.classList.add("done");label.textContent="Đã copy! Dán vào Claude";showToast("✅ Đã copy prompt. Mở Claude, dán vào và gửi.");setTimeout(function(){btn.classList.remove("done");label.textContent="Copy Prompt"},3500)}
+function legacyCopy(){var ta=document.createElement("textarea");ta.value=promptText;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.top="0";ta.style.opacity="0";ta.style.fontSize="16px";document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,ta.value.length);var ok=false;try{ok=document.execCommand("copy")}catch(e){}document.body.removeChild(ta);return ok}
+function selectBox(){var r=document.createRange();r.selectNodeContents(box);var s=window.getSelection();s.removeAllRanges();s.addRange(r);box.scrollIntoView({behavior:"smooth",block:"start"})}
+function fail(){selectBox();showToast("Đã bôi đen nội dung. Nhấn giữ vào vùng chữ → Sao chép.")}
+btn.addEventListener("click",function(){if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(promptText).then(success,function(){legacyCopy()?success():fail()});return}legacyCopy()?success():fail()});
+})();
+</script>
+</body>
+</html>
